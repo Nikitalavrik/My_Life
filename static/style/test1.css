@@ -1,0 +1,200 @@
+body{
+    font-family: 'PT Sans', sans-serif;
+}
+
+
+audio{
+   
+    display: none;
+  
+}
+
+.progress{
+    height: 3px;
+    width: 70%;
+    margin-left: 70px;
+    margin-bottom: 5px;
+    
+    
+}
+.curtime{
+    
+    margin-top:0px;
+    width: 10px;
+    height: 5px;
+}
+.durtime{
+    width: 10px;
+    height: 5px;
+    float: right;
+}
+.time{
+    height: 10px;
+    width: 74%;
+    margin-left: 50px;
+    
+}
+.progress-bar-grey{
+
+    background-color: grey;
+    height: 3px;
+    width: 0;
+}
+.show{
+    display: block;
+}
+
+.play-sprite{
+    height: 50px;
+    width: 50px;
+    background-image:url("play.png");
+    background-repeat: no-repeat;
+    background-size: 50px 50px;
+    
+}
+
+.playing{
+    background-image:url("pause.png");
+}
+
+.vol-control{
+    position: relative;
+    width: 60px;
+    height: 5px;
+}
+
+.accept{
+    all:initial;
+    width: 32px;
+    height: 32px;
+    background-image:url("plus.png");
+    background-repeat: no-repeat;
+    background-size: 32px 32px;
+    cursor: pointer;
+
+}
+.added {
+    background-image:url("checked.png");
+}
+.del {
+    all:initial;
+    width: 32px;
+    height: 32px;
+    background-image:url("delete.png");
+    background-repeat: no-repeat;
+    background-size: 32px 32px;
+    cursor: pointer;
+}
+input[type="range"] {
+
+    width: 60px;
+    }
+
+
+h1 {
+    text-align: center;
+    font-size: 7em;
+    margin: auto;
+    width: 59%;
+    letter-spacing: 1em;
+}
+
+
+form {
+    width: 35%;
+    margin: 0 auto;
+    margin-top:8em;
+    margin-bottom: 4em;
+}
+
+label {
+    margin-right: 3.5%;
+}
+
+.audio-name{
+    width: 600px;
+    margin: 20px auto;
+}
+
+.textinputclass, .signbtn, #id_password1, #id_password2{
+    float: right;
+}
+
+.yturl{
+    all: inherit;
+    width: 32px;
+    height: 50px;
+    background-image:url("youtube-logo.png");
+    background-repeat: no-repeat;
+    background-size: 32px 32px;
+    cursor: pointer;
+}
+#btn_search{
+    margin-left:3%;
+}
+
+#sign_form{
+    width: 33%;
+}
+p{
+    margin: 5px auto;
+    height: 32px;
+    
+}
+
+#id_login {
+    width: 22%;
+    height: 35%;
+    margin: auto;
+    margin-top: 30px;
+}
+
+#login_form{
+    width: 23%;
+    height: 200px;
+}
+#login_form p input {
+    float:right;
+}
+
+#design_feature{
+    height: 80px;
+    width: 100%;
+}
+
+#addsongform{
+    position: relative;
+    float: right;
+    margin: 0 0;
+    display: block;
+    width: 32px;
+}
+#deletesongform{
+    position: relative;
+    margin: 0 0;
+    display: block;
+    width: 32px; 
+}
+#id_search{
+    width: 240px;
+}
+
+
+.repeat{
+    
+    position: relative;
+    width: 32px;
+    height: 32px;
+    float: right;
+    background-image:url("repeat.png");
+    background-repeat: no-repeat;
+    background-size: 32px 32px;
+}
+
+
+
+.repeat-after{
+
+    background-image:url("repeat-after.png")
+
+}

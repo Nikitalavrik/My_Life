@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block content %}
+{% load my_exstras %}
+<div class="container">
+    <h1>MUSIC</h1>
+    <form action="{% url "search_music" %}" method="POST">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" id="btn_search" class="btn" value="Submit">
+    </form>
+
+    {% for song in song_list %}
+   
+    <div class="container audio-name">
+        <div class="play-sprite"></div>
+
+        <a href="https://www.youtube.com/{{ song.youtube_url }}" class="yturl"></a>
+        <h3>{{ song.name|name_edit }}</h3>
+
+        <input class="vol-control" type="range" min="0" max="100" step="1"></input>
+
+        <div class="progress">
+            <div class="progress-bar-grey"></div>
+        </div>
+
+        <div class="time">
+            <div class="curtime">00:00</div>
+            <div class="durtime">00:00</div>
+        </div>
+        
+        
+        <div class="repeat"></div> 
+        <audio>
+            <source src="{{ song.url }}" type="audio/mpeg" preload="none">
+        </audio>
+
+        <form action="{% url "deletesong" %}" id="deletesongform" method="POST">
+            {% csrf_token %}
+            <input type="hidden" name="song_name" value="{{ song.name }}">
+            <input class="del" type="submit"  value="">
+        </form>
+    </div>
+
+    {% endfor %}
+    
+</div>
+
+{% endblock content %}
