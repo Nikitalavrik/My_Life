@@ -1,3 +1,11 @@
+
+
+
+/* Style for standart html style 
+
+======================================*/
+
+
 body{
     font-family: 'PT Sans', sans-serif;
 }
@@ -9,87 +17,6 @@ audio{
   
 }
 
-.progress{
-    height: 3px;
-    width: 70%;
-    margin-left: 70px;
-    display: none;
-    margin-bottom: 5px;
-    
-    
-}
-.curtime{
-    
-    margin-top:0px;
-    width: 10px;
-    height: 5px;
-}
-.durtime{
-    width: 10px;
-    height: 5px;
-    float: right;
-}
-.time{
-    height: 10px;
-    width: 74%;
-    margin-left: 50px;
-    display:none;
-}
-.progress-bar-grey{
-
-    background-color: grey;
-    height: 3px;
-    width: 0;
-}
-.show{
-    display: block;
-}
-
-.play-sprite{
-    height: 50px;
-    width: 50px;
-    background-image:url("play.png");
-    background-repeat: no-repeat;
-    background-size: 50px 50px;
-    margin-right: 10px;
-    float: left;
-    
-}
-
-.playing{
-    background-image:url("pause.png");
-}
-
-.vol-control{
-    position: relative;
-    top:-50px;
-    float: right;
-    width: 60px;
-    height: 5px;
-}
-
-.accept{
-    all:initial;
-    width: 32px;
-    height: 32px;
-    background-image:url("plus.png");
-    background-repeat: no-repeat;
-    background-size: 32px 32px;
-    cursor: pointer;
-
-}
-.added {
-    background-image:url("checked.png");
-}
-.del {
-    all:initial;
-    width: 32px;
-    height: 32px;
-    background-image:url("delete.png");
-    background-repeat: no-repeat;
-    background-size: 32px 32px;
-    cursor: pointer;
-}
 input[type="range"] {
     display: none;
     width: 60px;
@@ -97,15 +24,15 @@ input[type="range"] {
 
 h3 {
     width: 420px;
-    margin:10px 0 5px 70px;
+    margin: 10px 0 5px 70px;
 }
 
 h1 {
-    text-align: center;
-    font-size: 7em;
     margin: auto;
     width: 59%;
     letter-spacing: 1em;
+    text-align: center;
+    font-size: 7em;
 }
 
 
@@ -120,95 +47,15 @@ label {
     margin-right: 3.5%;
 }
 
-.audio-name{
-    width: 600px;
-    margin: 20px auto;
-}
-
-.textinputclass, .signbtn, #id_password1, #id_password2{
-    float: right;
-}
-
-.yturl{
-    all: inherit;
-    width: 32px;
-    height: 50px;
-    float: left;
-    background-image:url("youtube-logo.png");
-    background-repeat: no-repeat;
-    background-size: 32px 32px;
-    cursor: pointer;
-    margin: 0 5px 0 0;
-}
-#btn_search{
-    margin-left:3%;
-}
-
-#sign_form{
-    width: 33%;
-}
 p{
     margin: 5px auto;
     height: 32px;
     
 }
 
-#id_login {
-    width: 22%;
-    height: 35%;
-    margin: auto;
-    margin-top: 30px;
-}
+/* Header 
 
-#login_form{
-    width: 23%;
-    height: 200px;
-}
-#login_form p input {
-    float:right;
-}
-
-#design_feature{
-    height: 80px;
-    width: 100%;
-}
-
-#addsongform{
-    position: relative;
-    right: -529px;
-    margin: 0 0;
-    display: block;
-    width: 32px;
-}
-#deletesongform{
-    position: relative;
-    right: -529px;;
-    margin: 0 0;
-    display: block;
-    width: 32px; 
-    z-index: -1;
-}
-#id_search{
-    width: 240px;
-}
-
-
-.repeat{
-    display: none;
-    position: relative;
-    top: -40px;
-    right:-50px;
-    width: 32px;
-    height: 32px;
-    float: right;
-    background-image:url("repeat.png");
-    background-repeat: no-repeat;
-    background-size: 32px 32px;
-}
-
-.repeat-after{
-    background-image:url("repeat-after.png")
-}
+======================================*/
 
 .back-player{
     width: 100%;
@@ -244,3 +91,179 @@ p{
     top:-22px;
 }
 
+/* Player style 
+
+==============================*/
+
+.progress{
+    height: 3px;
+    width: 70%;
+    margin-left: 70px;
+    display: none;
+    margin-bottom: 5px;  
+}
+.curtime{
+    
+    margin-top:0px;
+    width: 10px;
+    height: 5px;
+}
+.durtime{
+    width: 10px;
+    height: 5px;
+    float: right;
+}
+.time{
+    height: 10px;
+    width: 74%;
+    margin-left: 50px;
+    display:none;
+}
+.progress-bar-grey{
+
+    background-color: grey;
+    height: 3px;
+    width: 0;
+}
+
+
+.play-sprite{
+    height: 50px;
+    width: 50px;
+    background-image:url("../image/play.png");
+    background-repeat: no-repeat;
+    background-size: 50px 50px;
+    margin-right: 10px;
+    float: left;
+    
+}
+
+.playing{
+    background-image:url("../image/pause.png");
+}
+
+.vol-control{
+    position: relative;
+    top:-50px;
+    float: right;
+    width: 60px;
+    height: 5px;
+}
+
+.accept{
+    all:initial;
+    width: 32px;
+    height: 32px;
+    background-image:url("../image/plus.png");
+    background-repeat: no-repeat;
+    background-size: 32px 32px;
+    cursor: pointer;
+
+}
+.added {
+    background-image:url("../image/checked.png");
+}
+.del {
+    all:initial;
+    width: 32px;
+    height: 32px;
+    background-image:url("../image/delete.png");
+    background-repeat: no-repeat;
+    background-size: 32px 32px;
+    cursor: pointer;
+}
+
+.audio-name{
+    width: 600px;
+    margin: 20px auto;
+}
+
+.textinputclass, .signbtn, #id_password1, #id_password2{
+    float: right;
+}
+
+.yturl{
+    all: inherit;
+    width: 32px;
+    height: 50px;
+    float: left;
+    background-image:url("../image/youtube-logo.png");
+    background-repeat: no-repeat;
+    background-size: 32px 32px;
+    cursor: pointer;
+    margin: 0 5px 0 0;
+}
+#btn_search{
+    margin-left:3%;
+}
+
+/* Forms style
+==========================*/
+
+#sign_form{
+    width: 33%;
+}
+
+#id_login {
+    width: 22%;
+    height: 35%;
+    margin: auto;
+    margin-top: 30px;
+}
+
+#login_form{
+    width: 23%;
+    height: 200px;
+}
+#login_form p input {
+    float:right;
+}
+
+#addsongform{
+    position: relative;
+    right: -529px;
+    margin: 0 0;
+    display: block;
+    width: 32px;
+}
+#deletesongform{
+    position: relative;
+    right: -529px;;
+    margin: 0 0;
+    display: block;
+    width: 32px; 
+    z-index: -1;
+}
+#id_search{
+    width: 240px;
+}
+
+
+.repeat{
+    display: none;
+    position: relative;
+    top: -40px;
+    right:-50px;
+    width: 32px;
+    height: 32px;
+    float: right;
+    background-image:url("../image/repeat.png");
+    background-repeat: no-repeat;
+    background-size: 32px 32px;
+}
+
+.repeat-after{
+    background-image:url("../image/repeat-after.png")
+}
+
+/* Functional styles 
+
+==============================*/
+
+#design_feature{
+    height: 80px;
+    width: 100%;
+}
+.show{
+    display: block;
+}
