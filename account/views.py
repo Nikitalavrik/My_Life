@@ -11,7 +11,7 @@ from braces.views import SelectRelatedMixin
 class SignUp(CreateView):
     form_class = UserCreateForm
     success_url = reverse_lazy('login')
-    template_name = "accounts/signup.html"
+    template_name = "signup.html"
 
     def get_queryset(self):
         try:

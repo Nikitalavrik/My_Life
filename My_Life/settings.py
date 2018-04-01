@@ -58,8 +58,16 @@ ROOT_URLCONF = 'My_Life.urls'
 
 TEMPLATES = [
     {
-        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'BACKEND': 'django.template.backends.jinja2.Jinja2',
         'DIRS': [TEMPLATE_DIR],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'environment': 'music.jinja2.environment'
+        },
+    },
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [os.path.join(TEMPLATE_DIR, 'account')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

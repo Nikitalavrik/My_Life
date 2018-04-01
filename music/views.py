@@ -30,18 +30,18 @@ def homepage(request):
 
     """Return start page"""
     
-    
+
     audio = ServerMusic()
     form = SearchForm(request.POST or None)
 
     templ = {'songs' : audio, 'form' : form, 'message' : "Hi"}
     
-    return render(request, "index.html",templ)
+    return render(request, "music/index.html", templ)
 
 class PlayListView(LoginRequiredMixin, ListView):
 
     model = models.Song
-    template_name = "user_list.html"
+    template_name = "music/user_list.html"
 
     def get_queryset(self):
         try:
@@ -93,13 +93,13 @@ def search_music(request):
             
     templ = {'songs' : audio, 'form' : form}
     
-    return render(request, "index.html",templ)
+    return render(request, "music/index.html",templ)
 
 
 class BrandPlayListView(ListView):
     
     model = models.Song
-    template_name = "brand.html"
+    template_name = "music/brand.html"
 
     def get_queryset(self):
         self.song_user = User.objects.get(username="BrandMusic")

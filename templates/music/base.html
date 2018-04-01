@@ -1,15 +1,15 @@
 <html lang="en">
-    {% load staticfiles %}   
+      
     <head>
         <title>Life</title>
         <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="{% static 'style/bootstrap.min.css' %}" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="{{static('style/bootstrap.min.css')}}" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     
         <!-- Optional theme -->
-        <link rel="stylesheet" href="{% static 'style/bootstrap-theme.min.css' %}" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+        <link rel="stylesheet" href="{{static('style/bootstrap-theme.min.css')}}" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     
         <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" href="{% static 'style/hom.css' %}" type="text/css">
+        <link rel="stylesheet" href="{{static('style/hom.css')}}" type="text/css">
 
     </head>
 
@@ -22,14 +22,16 @@
         <nav class="navbar navbar-default techfont resize-navbar">
             <div class="container">
                 <ul class="nav navbar-nav">
-                    <li><a class='navbar-brand bigbrand' href="{% url "homepage" %}">Home</a></li>
-                    <li><a class='navbar-link bigbrand' href="{% url "brand" %}">NewBrand</a></li>
-                    {% if user.is_authenticated %}
-                    <li><a class='navbar-link bigbrand' href="{% url "user_page" user.username %}">{{ user.username }}</a></li> 
-                    <li><a class='navbar-link bigbrand' href="{% url "account:logout" %}">Logout</a></li>           
+                    <li><a class='navbar-brand bigbrand' href="{{url('homepage')}}">Home</a></li>
+                    <li><a class='navbar-link bigbrand' href="{{url('brand')}}">NewBrand</a></li>
+                    {% if request.user.is_authenticated %}
+                    <li><a class='navbar-link bigbrand' href="{{url('user_page', args=[request.user.username])}}">
+                        {{ request.user.username }}</a>
+                    </li> 
+                    <li><a class='navbar-link bigbrand' href="{{url('account:logout')}}">Logout</a></li>           
                     {% else %}
-                    <li><a class='navbar-link bigbrand' href="{% url "account:login" %}">Login</a></li>
-                    <li><a class='navbar-link bigbrand' href="{% url "account:signup" %}">Registration</a></li>
+                    <li><a class='navbar-link bigbrand' href="{{url('account:login')}}">Login</a></li>
+                    <li><a class='navbar-link bigbrand' href="{{url('account:signup')}}">Registration</a></li>
                     {% endif %}
                 </ul>
                 
@@ -64,8 +66,8 @@
     {% block content %}
     
     {% endblock content %}
-    <script src="{% static "js/jquery.js" %}"></script>
-    <script src="{% static "js/site.js" %}" ></script>
+    <script src="{{static('js/jquery.js')}}"></script>
+    <script src="{{static('js/site.js')}}" ></script>
     
     </body>
     </html>

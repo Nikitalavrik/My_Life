@@ -1,12 +1,17 @@
-{% extends "base.html" %}
+{% extends "music/base.html" %}
 {% block content %}
     <div class="container box">
+        {% block search_form %}
         <h1>MUSIC</h1>
-        <form action="{% url "search_music" %}" method="POST">
-            {% csrf_token %}
-            {{ form }}
+        <form action="{{url('search_music')}}" method="POST">
+            <input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token }}">
+            <tr><th><label for="id_search">Search:</label></th><td>
+                    <input type="text" name="search" maxlength="100" required id="id_search" />
+            </td></tr>
             <input type="submit" id="btn_search" class="btn" value="Submit">
         </form>
+        {% endblock search_form %}
+
         
         {% for song in songs %}
         
@@ -34,8 +39,8 @@
 
                 {% if request.method == "POST" and user.is_authenticated%}
                 
-                <form action="{% url "addsong" %}" id="addsongform" method="POST">
-                    {% csrf_token %}
+                <form action="{{url('addsong')}}" id="addsongform" method="POST">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token }}">
                     <input type="hidden" name="song_name" value="{{ song.name }}">
                     <input type="hidden" name="song_url" value="{{ song.url }}">
                     <input type="hidden" name="youtube_url" value="{{ song.youtube_url }}">
