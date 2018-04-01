@@ -13,16 +13,12 @@ from music import models
 from django.contrib.auth import get_user_model
 from account import models as md
 from django.http import Http404, HttpResponse
-from braces.views import SelectRelatedMixin
 import json
 from django.template import RequestContext
-from apscheduler.schedulers.blocking import BlockingScheduler
-from crontab import CronTab
 import datetime
 import multiprocessing
 import time
 
-sched = BlockingScheduler()
 User = get_user_model()
 
 
@@ -30,13 +26,13 @@ def homepage(request):
 
     """Return start page"""
     
-
+    
     audio = ServerMusic()
     form = SearchForm(request.POST or None)
 
     templ = {'songs' : audio, 'form' : form, 'message' : "Hi"}
     
-    return render(request, "music/index.html", templ)
+    return render(request, "music/index.html",templ)
 
 class PlayListView(LoginRequiredMixin, ListView):
 

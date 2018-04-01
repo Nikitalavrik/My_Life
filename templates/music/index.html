@@ -1,7 +1,6 @@
 {% extends "music/base.html" %}
 {% block content %}
-    <div class="container box">
-        {% block search_form %}
+    <div class="container box"> 
         <h1>MUSIC</h1>
         <form action="{{url('search_music')}}" method="POST">
             <input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token }}">
@@ -10,32 +9,30 @@
             </td></tr>
             <input type="submit" id="btn_search" class="btn" value="Submit">
         </form>
-        {% endblock search_form %}
 
-        
-        {% for song in songs %}
-        
+        {% for song in songs %}        
+
         <div class="container audio-name">
-            <div class="play-sprite"></div>
-            
-            <a href="https://www.youtube.com/{{ song.youtube_url }}" class="yturl"></a>
-            <h3>{{ song.name }}</h3>
-
-            <input class="vol-control" type="range" min="0" max="100" step="1"></input>
-            
-            <div class="progress">
-                <div class="rer"></div>
-            </div>
-
-            <div class="time">
-                <div class="curtime">00:00</div>
-                <div class="durtime">00:00</div>
-            </div>
-            <div class="repeat"></div> 
-
-            <audio>
-                <source src="{{ song.url }}" type="audio/mpeg" preload="metadata">
-            </audio>
+                <div class="play-sprite"></div>
+                
+                <a href="https://www.youtube.com/{{ song.youtube_url }}" class="yturl"></a>
+                <h3>{{ song.name }}</h3>
+        
+                <input class="vol-control" type="range" min="0" max="100" step="1"></input>
+                
+                <div class="progress">
+                    <div class="progress-bar-grey"></div>
+                </div>
+        
+                <div class="time">
+                    <div class="curtime">00:00</div>
+                    <div class="durtime">00:00</div>
+                </div>
+        
+                <div class="repeat"></div> 
+                <audio>
+                    <source src="{{ song.url }}" type="audio/mpeg" preload="metadata">
+                </audio>
 
                 {% if request.method == "POST" and user.is_authenticated%}
                 
