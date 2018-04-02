@@ -1,6 +1,4 @@
 
-
-
 /* Style for standart html style 
 
 ======================================*/
@@ -68,14 +66,15 @@ p {
 .top_player{
     position: fixed;
     display: none;
-    width: 600px;
+    width: 680px;
     height: 70px;
 }
 
 .top-name {
-    width: 430px;
-    margin-left: auto;
-    margin-right: auto;
+    width: 400px;
+    margin-left: 100px;
+    
+
 }
 
 .top-play{
@@ -86,11 +85,11 @@ p {
 }
 
 #vol-loc {
-    top:-40px;
+    top:-35px;
 }
 
-.top-repeat{
-    top:-22px;
+#top-repeat{
+    top:-25px;
 }
 
 .headline {
@@ -101,7 +100,43 @@ p {
     height: 40px;
     width: 40px;
     background-size: 40px 40px;
+    margin-right: 0;
+    background-position: center; 
 }
+
+.prev-track {
+    height: 20px;
+    width: 20px;
+    margin-top: 20px;
+    margin-right: 5px;
+    
+    background-image:url("../image/prev-track.png");
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    float: left;
+}
+
+.next-track {
+    height: 20px;
+    width: 20px;
+    margin-top: 20px;
+    margin-right: 5px;
+    background-image:url("../image/skip-track.png");
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    float: right;
+}
+
+.player-button {
+    width: 95px;
+    height: 70px;
+    float: left;
+}
+
+#top-progress {
+    margin-left: 100px;
+}
+
 /* Player style 
 
 ==============================*/
@@ -115,8 +150,6 @@ p {
 }
 
 .curtime{
-    
-    
     width: 10px;
     height: 5px;
     float: left;
@@ -136,7 +169,6 @@ p {
 }
 
 .progress-bar-grey{
-
     background-color: grey;
     height: 3px;
     width: 0;

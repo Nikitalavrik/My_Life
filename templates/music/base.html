@@ -37,11 +37,16 @@
                 </ul>                
                     <div class="container top_player">
                         
-                        <div class="play-sprite top-play" id="custom-icon"></div>
+                        <div class="player-button">
+                            <div class="prev-track"></div>
+                            <div class="play-sprite top-play" id="custom-icon"></div>
+                            <div class="next-track"></div>
+                        </div>
+
                         <h5 class="top-name"></h5>
                         <input class="vol-control top-vol show" type="range" min="0" max="100" step="1"id="vol-loc"></input>
 
-                        <div class="progress show top-progress">
+                        <div class="progress show top-progress" id="top-progress">
                             <div class="progress-bar-grey"></div>
                         </div>
 
@@ -50,7 +55,7 @@
                             <div class="durtime">00:00</div>
                         </div>
 
-                        <div class="repeat top-repeat show"></div> 
+                        <div class="repeat top-repeat show" id="top-repeat"></div> 
                      
                     </div>               
             </div>
