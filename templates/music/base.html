@@ -1,7 +1,11 @@
+
 <html lang="en">
       
     <head>
+        <meta charset="UTF-8">
         <title>Life</title>
+        <link rel="shortcut icon" href="{{static('style/image/favicon.ico')}}"/>
+        
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="{{static('style/bootstrap.min.css')}}" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     
@@ -10,17 +14,15 @@
     
         <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="{{static('style/site.css')}}" type="text/css">
-
+          
     </head>
 
-        
-    
     <body>
 
         <div class="navbar navbar-default techfont back-player"></div>
         <nav class="navbar navbar-default techfont resize-navbar">
             <div class="container">
-                <ul class="nav navbar-nav">
+                <ul class="nav navbar-nav headline">
                     <li><a class='navbar-brand bigbrand' href="{{url('homepage')}}">Home</a></li>
                     <li><a class='navbar-link bigbrand' href="{{url('brand')}}">NewBrand</a></li>
                     {% if request.user.is_authenticated %}
@@ -32,16 +34,12 @@
                     <li><a class='navbar-link bigbrand' href="{{url('account:login')}}">Login</a></li>
                     <li><a class='navbar-link bigbrand' href="{{url('account:signup')}}">Registration</a></li>
                     {% endif %}
-                </ul>
-                
-
-                
+                </ul>                
                     <div class="container top_player">
-                        <div class="play-sprite top-play"></div>
-
-                        <h4 class="top-name"></h4>
-
-                        <input class="vol-control top-vol show" type="range" min="0" max="100" step="1"></input>
+                        
+                        <div class="play-sprite top-play" id="custom-icon"></div>
+                        <h5 class="top-name"></h5>
+                        <input class="vol-control top-vol show" type="range" min="0" max="100" step="1"id="vol-loc"></input>
 
                         <div class="progress show top-progress">
                             <div class="progress-bar-grey"></div>
@@ -54,19 +52,12 @@
 
                         <div class="repeat top-repeat show"></div> 
                      
-                    </div>
-
-
-
-                
+                    </div>               
             </div>
-        </nav>
-       
-    {% block content %}
-    
+        </nav>      
+    {% block content %}   
     {% endblock content %}
     <script src="{{static('js/jquery.js')}}"></script>
-    <script src="{{static('js/site.js')}}" ></script>
-    
+    <script src="{{static('js/site.js')}}" ></script>  
     </body>
     </html>

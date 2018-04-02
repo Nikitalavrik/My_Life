@@ -5,11 +5,9 @@
 
 ======================================*/
 
-
 body{
     font-family: 'PT Sans', sans-serif;
 }
-
 
 audio{
    
@@ -24,7 +22,7 @@ input[type="range"] {
 
 h3 {
     width: 420px;
-    margin: 10px 0 5px 70px;
+    margin: 10px 0 15px 70px;
 }
 
 h1 {
@@ -47,10 +45,9 @@ label {
     margin-right: 3.5%;
 }
 
-p{
+p {
     margin: 5px auto;
-    height: 32px;
-    
+    height: 32px; 
 }
 
 /* Header 
@@ -67,6 +64,7 @@ p{
 .resize-navbar{
     height: 70px;
 }
+
 .top_player{
     position: fixed;
     display: none;
@@ -74,23 +72,36 @@ p{
     height: 70px;
 }
 
-
-.top-play{
-    height: 40px;
-    width: 40px;
-    margin-top: 10px;
-    margin-right: 30px;
-    background-size: 40px 40px;
+.top-name {
+    width: 430px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.top-vol{
-    top:-30px;
+.top-play{
+
+    margin-top: 10px;
+    margin-right: 30px;
+    
+}
+
+#vol-loc {
+    top:-40px;
 }
 
 .top-repeat{
     top:-22px;
 }
 
+.headline {
+    margin-top: 7px;
+}
+
+#custom-icon {
+    height: 40px;
+    width: 40px;
+    background-size: 40px 40px;
+}
 /* Player style 
 
 ==============================*/
@@ -102,30 +113,34 @@ p{
     display: none;
     margin-bottom: 5px;  
 }
+
 .curtime{
     
-    margin-top:0px;
+    
     width: 10px;
     height: 5px;
+    float: left;
 }
+
 .durtime{
     width: 10px;
     height: 5px;
     float: right;
 }
+
 .time{
     height: 10px;
     width: 74%;
     margin-left: 50px;
     display:none;
 }
+
 .progress-bar-grey{
 
     background-color: grey;
     height: 3px;
     width: 0;
 }
-
 
 .play-sprite{
     height: 50px;
@@ -160,9 +175,11 @@ p{
     cursor: pointer;
 
 }
+
 .added {
     background-image:url("../image/checked.png");
 }
+
 .del {
     all:initial;
     width: 32px;
@@ -193,6 +210,7 @@ p{
     cursor: pointer;
     margin: 0 5px 0 0;
 }
+
 #btn_search{
     margin-left:3%;
 }
@@ -215,6 +233,7 @@ p{
     width: 23%;
     height: 200px;
 }
+
 #login_form p input {
     float:right;
 }
@@ -226,6 +245,7 @@ p{
     display: block;
     width: 32px;
 }
+
 #deletesongform{
     position: relative;
     right: -529px;;
@@ -234,10 +254,10 @@ p{
     width: 32px; 
     z-index: -1;
 }
+
 #id_search{
     width: 240px;
 }
-
 
 .repeat{
     display: none;
@@ -264,6 +284,7 @@ p{
     height: 80px;
     width: 100%;
 }
+
 .show{
     display: block;
 }

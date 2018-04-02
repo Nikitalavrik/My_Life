@@ -17,7 +17,8 @@ from django.conf.urls import url,include
 from django.contrib import admin
 from django.conf import settings
 from music import views
-
+from django.contrib.staticfiles.storage import staticfiles_storage
+from django.views.generic.base import RedirectView
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -28,7 +29,8 @@ urlpatterns = [
     url(r'^userpage/(?P<username>[-\w]+)/$', views.PlayListView.as_view(), name="user_page"),
     url(r'^account/',include("account.urls"), name="account"),
     url(r"^account/", include("django.contrib.auth.urls")),
-    url(r"^brand/", views.BrandPlayListView.as_view(), name="brand")
+    url(r"^brand/", views.BrandPlayListView.as_view(), name="brand"),
+
 ]
 
 if settings.DEBUG:
