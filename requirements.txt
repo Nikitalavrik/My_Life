@@ -18,7 +18,7 @@ ez-setup==0.9
 Faker==0.8.6
 future==0.16.0
 idna==2.6
-Jinja2==2.10
+Jinja2==2.11.3
 MarkupSafe==1.0
 multiprocessing-on-dill==3.5.0a4
 olefile==0.44
